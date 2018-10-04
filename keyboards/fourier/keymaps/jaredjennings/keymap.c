@@ -6,9 +6,11 @@ extern keymap_config_t keymap_config;
 // The underscores don't mean anything - you can have a layer called STUFF or any other name.
 // Layer names don't all need to be of the same length, obviously, and you can also skip them
 // entirely and just use numbers.
-#define _BASE 0
-#define _FN1 1
-#define _FN2 2
+#define _COLEMAK_DH 0
+#define _QWERTY 1
+#define _FN1 2
+#define _FN2 3
+#define _FN3 4
 
 enum custom_keycodes {
   QWERTY = SAFE_RANGE,
@@ -18,17 +20,25 @@ enum custom_keycodes {
 #define XXXXXXX KC_NO
 #define KC_FN1 MO(_FN1)
 #define KC_FN2 MO(_FN2)
+#define KC_FN3 MO(_FN3)
 #define KC_SPFN1 LT(_FN1, KC_SPACE)
 #define KC_BSFN2 LT(_FN2, KC_BSPC)
 #define KC_BSFN1 LT(_FN1, KC_BSPC)
 #define KC_SPFN2 LT(_FN2, KC_SPACE)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-  [_BASE] = LAYOUT(
+  [_COLEMAK_DH] = LAYOUT(
+    KC_ESC,  KC_Q,    KC_W,    KC_F,    KC_P,    KC_B,    KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN, KC_MINS, KC_BSPC,
+    KC_TAB,  KC_A,    KC_R,    KC_S,    KC_T,    KC_G,    KC_K,    KC_N,    KC_E,    KC_I,    KC_O,             KC_ENT,
+    KC_LSFT, KC_X,    KC_C,    KC_D,    KC_V,    KC_Z,    KC_M,             KC_H,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
+    KC_LCTL, KC_FN1, KC_LGUI, KC_LALT,  KC_BSFN1,         KC_SPFN2,                  KC_RALT, KC_RGUI, KC_FN3,  KC_RCTL
+  ),
+
+  [_QWERTY] = LAYOUT(
     KC_ESC,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_MINS, KC_BSPC,
     KC_TAB,  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN,          KC_ENT,
     KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,             KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
-    KC_LCTL, KC_FN1, KC_LGUI, KC_LALT,  KC_BSFN1,         KC_SPFN2,                  KC_RALT, KC_RGUI, KC_FN2,  KC_ENT
+    KC_LCTL, KC_FN1, KC_LGUI, KC_LALT,  KC_BSFN1,         KC_SPFN2,                  KC_RALT, KC_RGUI, KC_FN3,  KC_RCTL
   ),
 
   [_FN1] = LAYOUT(
@@ -43,8 +53,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     RESET,   _______, KC_PSCR, KC_INS,  KC_PGUP, KC_HOME, _______, _______, _______, _______, KC_DQUO,          KC_PIPE,
     _______, _______, _______, KC_DEL,  KC_PGDN, KC_END,  _______,          _______, _______, _______, _______, _______,
     _______, _______, _______, _______, KC_DEL,           _______,                   _______, _______, _______, _______
-  )
+                  ),
 
+  [_FN3] = LAYOUT(
+                  _______, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12,
+                  _______, DF(_COLEMAK_DH), DF(_QWERTY), _______, _______, _______,      _______, _______, _______, _______, _______, _______,
+                  _______, _______, _______, _______, _______, _______,                  _______, _______, _______, _______, _______, _______,
+                  _______, _______, _______, _______, _______,           _______,                   _______, _______, _______, _______
+                  )
 };
 
 

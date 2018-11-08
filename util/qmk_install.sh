@@ -16,6 +16,9 @@ case $(uname -a) in
 	MSYS_NT*|MINGW64_NT*|MINGW32_NT*)
 		exec "${util_dir}/msys2_install.sh"
 	;;
+	FreeBSD*)
+		exec "${util_dir}/freebsd_install.sh"
+	;;
   *)
     echo "Environment not supported. Please see https://docs.qmk.fm for details on how to configure the QMK Firmware build tools manually."
   ;;

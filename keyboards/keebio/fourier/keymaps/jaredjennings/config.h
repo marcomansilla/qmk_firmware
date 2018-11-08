@@ -28,4 +28,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define USE_SERIAL
 // #define USE_I2C
 
+/* tune space/fn1 and backspace/fn2 for faster typing */
+#define PERMISSIVE_HOLD
+#define TAPPING_TERM 150
+
+#define TAPPING_TOGGLE 2
+
 #endif

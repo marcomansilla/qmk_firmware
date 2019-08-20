@@ -24,3 +24,12 @@ TD(CAD_TD) \
 TD(BSW_TAP_DANCE) \
 ),
 };
+
+void led_set_user(uint8_t usb_led) {
+
+}
+
+void keyboard_post_init_user(void) {
+    rgblight_enable_noeeprom();
+    rgblight_mode_noeeprom(RGBLIGHT_MODE_RAINBOW_MOOD);
+}

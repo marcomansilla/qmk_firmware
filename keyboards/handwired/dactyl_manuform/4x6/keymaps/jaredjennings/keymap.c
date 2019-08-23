@@ -78,8 +78,8 @@ LAYOUT(
        KC_HOME, KC_Z,  KC_X,  KC_C,  KC_D,  KC_V,               KC_K,  KC_H,  KC_COMM, KC_DOT, KC_SLSH, KC_BSLS, \
        KC_LPRN, KC_RPRN,                                                               KC_MINS, KC_EQL, \
 
-       KC_LSFT, KC_BSFN1,                                               OSM(MOD_LALT), KC_SPFN2,
-       OSM(MOD_LCTL), KC_LGUI,                                               KC_FN3, KC_ENT,
+       KC_BSFN1, OSM(MOD_LSFT),                                               KC_NAV, KC_SPFN2,
+       OSM(MOD_LCTL), KC_LGUI,                                               KC_FN3, OSM(MOD_LALT),
        KC_NAV, KC_GRV,                                           KC_APP, KC_DEL \
        ),
 
@@ -90,8 +90,8 @@ LAYOUT(
        KC_HOME, KC_X,  KC_C,  KC_D,  KC_V,  KC_Z,               KC_M,  KC_H,  KC_COMM, KC_DOT, KC_SLSH, KC_BSLS, \
        KC_LPRN, KC_RPRN,                                                               KC_MINS, KC_EQL, \
 
-       KC_LSFT, KC_BSFN1,                                               OSM(MOD_LALT), KC_SPFN2,
-       OSM(MOD_LCTL), KC_LGUI,                                               KC_FN3, KC_ENT,
+       KC_BSFN1, OSM(MOD_LSFT),                                               KC_NAV, KC_SPFN2,
+       OSM(MOD_LCTL), KC_LGUI,                                               KC_FN3, OSM(MOD_LALT),
        KC_NAV, KC_GRV,                                           KC_APP, KC_DEL \
        ),
 
@@ -102,8 +102,8 @@ LAYOUT(
        KC_HOME, KC_Z,  KC_X,  KC_C,  KC_V,  KC_B,               KC_N,  KC_M,  KC_COMM, KC_DOT, KC_SLSH, KC_BSLS, \
        KC_LPRN, KC_RPRN,                                                               KC_MINS, KC_EQL, \
 
-       KC_LSFT, KC_BSFN1,                                               OSM(MOD_LALT), KC_SPFN2,
-       OSM(MOD_LCTL), KC_LGUI,                                               KC_FN3, KC_ENT,
+       KC_BSFN1, OSM(MOD_LSFT),                                               KC_NAV, KC_SPFN2,
+       OSM(MOD_LCTL), KC_LGUI,                                               KC_FN3, OSM(MOD_LALT),
        KC_NAV, KC_GRV,                                           KC_APP, KC_DEL \
        ),
 
@@ -139,12 +139,12 @@ LAYOUT(
 
 [_NAV] =
 LAYOUT(
-       ____, ____, ____, ____, ____, ____,       /**/        ____, KC_CT_L, KC_UP, KC_CT_R, ____, ____, \
-       ____, ____, ____, ____, ____, ____,         /**/        KC_HOME, KC_LEFT, KC_DOWN, KC_RIGHT, KC_END, ____, \
-       ____, ____, ____, ____, ____, ____,         /**/        ____, ____, KC_PGUP, KC_PGDN, ____, ____,  \
+       ____, ____, ____, KC_MS_U, ____, KC_ACL2,     /**/        ____, KC_CT_L, KC_UP, KC_CT_R, ____, ____, \
+       ____, ____, KC_MS_L, KC_MS_D, KC_MS_R, KC_ACL1, /**/      KC_HOME, KC_LEFT, KC_DOWN, KC_RIGHT, KC_END, ____, \
+       ____, ____, KC_WH_U, KC_WH_D, ____, KC_ACL0,    /**/      ____, ____, KC_PGUP, KC_PGDN, ____, ____, \
        ____, ____, /**/ ____, ____,
-       ____, ____, /**/ ____, ____,
-       ____, ____, /**/ ____, ____,
+       KC_MS_BTN1, KC_MS_BTN2, /**/ ____, ____,
+       KC_MS_BTN3, ____, /**/ ____, ____,
        ____, ____, /**/ ____, ____)
 };
 

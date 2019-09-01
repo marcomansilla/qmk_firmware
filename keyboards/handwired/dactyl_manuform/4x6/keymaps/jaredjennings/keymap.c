@@ -5,10 +5,10 @@ extern keymap_config_t keymap_config;
 #define _COLEMAK_DHM 0
 #define _COLEMAK_DH_ANSI 1
 #define _QWERTY 2
-#define _FN1 2
-#define _FN2 3
-#define _FN3 4
-#define _NAV 5
+#define _FN1 3
+#define _FN2 4
+#define _FN3 5
+#define _NAV 6
 
 // Fillers to make layering more clear
 

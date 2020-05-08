@@ -47,6 +47,19 @@ extern keymap_config_t keymap_config;
 #define KC_CT_L LCTL(KC_LEFT)
 #define KC_CT_R LCTL(KC_RIGHT)
 
+const keypos_t hand_swap_config[MATRIX_ROWS][MATRIX_COLS] =
+  {
+   {{5,0}, {4,0}, {3,0}, {2,0}, {1,0}, {0,0}},
+   {{5,1}, {4,1}, {3,1}, {2,1}, {1,1}, {0,1}},
+   {{5,2}, {4,2}, {3,2}, {2,2}, {1,2}, {0,2}},
+   {{5,3}, {4,3}, {3,3}, {2,3}, {1,3}, {0,3}},
+   {{5,4}, {4,4}, {3,4}, {2,4}, {1,4}, {0,4}},
+   {{5,5}, {4,5}, {3,5}, {2,5}, {1,5}, {0,5}},
+   {{5,6}, {4,6}, {3,6}, {2,6}, {1,6}, {0,6}},
+   {{5,7}, {4,7}, {3,7}, {2,7}, {1,7}, {0,7}},
+   {{5,8}, {4,8}, {3,8}, {2,8}, {1,8}, {0,8}},
+   {{5,9}, {4,9}, {3,9}, {2,9}, {1,9}, {0,9}}
+  };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -80,7 +93,7 @@ LAYOUT(
 
        KC_BSFN1, OSM(MOD_LSFT),                                               KC_NAV, KC_SPFN2,
        OSM(MOD_LCTL), KC_LGUI,                                               KC_FN3, OSM(MOD_LALT),
-       KC_NAV, KC_GRV,                                           KC_APP, KC_DEL \
+       SH_TT, KC_GRV,                                           KC_APP, SH_TT \
        ),
 
 [_COLEMAK_DH_ANSI] =
@@ -92,7 +105,7 @@ LAYOUT(
 
        KC_BSFN1, OSM(MOD_LSFT),                                               KC_NAV, KC_SPFN2,
        OSM(MOD_LCTL), KC_LGUI,                                               KC_FN3, OSM(MOD_LALT),
-       KC_NAV, KC_GRV,                                           KC_APP, KC_DEL \
+       SH_TT, KC_GRV,                                           KC_APP, SH_TT \
        ),
 
 [_QWERTY] =
@@ -104,7 +117,7 @@ LAYOUT(
 
        KC_BSFN1, OSM(MOD_LSFT),                                               KC_NAV, KC_SPFN2,
        OSM(MOD_LCTL), KC_LGUI,                                               KC_FN3, OSM(MOD_LALT),
-       KC_NAV, KC_GRV,                                           KC_APP, KC_DEL \
+       SH_TT, KC_GRV,                                           KC_APP, SH_TT \
        ),
 
 [_FN1] =
@@ -120,7 +133,7 @@ LAYOUT(
 [_FN2] =
 LAYOUT(
        KC_TILD, KC_EXLM, KC_AT, KC_HASH, KC_DLR, KC_PERC,       /**/        KC_CIRC, KC_AMPR, KC_ASTR, ____, ____, ____, \
-       RESET, ____, KC_PSCR, KC_INS, ____, ____,         /**/        ____, ____, ____, ____, KC_DQUO, ____, \
+       RESET, ____, KC_PSCR, KC_INS, KC_DEL, ____,         /**/        ____, ____, ____, ____, KC_DQUO, ____, \
        ____, ____, ____, ____, ____, ____,         /**/        ____, ____, ____, ____, ____, ____, \
        KC_LCBR, KC_RCBR, /**/ ____, ____,                                    \
        ____, ____, /**/ ____, ____,

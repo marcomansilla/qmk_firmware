@@ -163,6 +163,65 @@ LAYOUT(
        ____, ____, /**/ ____, ____)
 };
 
+/* outer column */
+const uint16_t PROGMEM esc_combo[] = { KC_Q, KC_W, COMBO_END };
+const uint16_t PROGMEM tab_combo[] = { KC_A, KC_R, COMBO_END };
+const uint16_t PROGMEM home_combo[] = { KC_Z, KC_X, COMBO_END };
+const uint16_t PROGMEM enter_combo[] = { KC_I, KC_O, COMBO_END };
+const uint16_t PROGMEM quote_combo[] = { KC_Y, KC_SCLN, COMBO_END };
+const uint16_t PROGMEM bsls_combo[] = { KC_DOT, KC_SLSH, COMBO_END };
+/* hex digits by chording [numpad] digits */
+const uint16_t PROGMEM hexa_combo[] = { KC_1, KC_2, COMBO_END };
+const uint16_t PROGMEM hexb_combo[] = { KC_2, KC_3, COMBO_END };
+const uint16_t PROGMEM hexc_combo[] = { KC_4, KC_5, COMBO_END };
+const uint16_t PROGMEM hexd_combo[] = { KC_5, KC_6, COMBO_END };
+const uint16_t PROGMEM hexe_combo[] = { KC_7, KC_8, COMBO_END };
+const uint16_t PROGMEM hexf_combo[] = { KC_8, KC_9, COMBO_END };
+const uint16_t PROGMEM colon_combo[] = { KC_4, KC_6, COMBO_END };
+/* underscore */
+const uint16_t PROGMEM und_combo[] = { KC_U, KC_E, COMBO_END };
+const uint16_t PROGMEM num_und_combo[] = { KC_8, KC_5, COMBO_END };
+/* brackets */
+const uint16_t PROGMEM lpar_combo[] = { KC_N, KC_T, COMBO_END };
+const uint16_t PROGMEM rpar_combo[] = { KC_O, KC_T, COMBO_END };
+const uint16_t PROGMEM lsquare_combo[] = { KC_N, KC_S, COMBO_END };
+const uint16_t PROGMEM rsquare_combo[] = { KC_O, KC_S, COMBO_END };
+const uint16_t PROGMEM lcurly_combo[] = { KC_N, KC_R, COMBO_END };
+const uint16_t PROGMEM rcurly_combo[] = { KC_O, KC_R, COMBO_END };
+const uint16_t PROGMEM langle_combo[] = { KC_N, KC_A, COMBO_END };
+const uint16_t PROGMEM rangle_combo[] = { KC_O, KC_A, COMBO_END };
+
+combo_t key_combos[COMBO_COUNT] =
+  {
+/* outer column */
+   COMBO(esc_combo, KC_ESC),
+   COMBO(tab_combo, KC_TAB),
+   COMBO(home_combo, KC_HOME),
+   COMBO(enter_combo, KC_ENT),
+   COMBO(quote_combo, KC_QUOT),
+   COMBO(bsls_combo, KC_BSLS),
+/* hex digits by chording [numpad] digits */
+   COMBO(hexa_combo, KC_A),
+   COMBO(hexb_combo, KC_B),
+   COMBO(hexc_combo, KC_C),
+   COMBO(hexd_combo, KC_D),
+   COMBO(hexe_combo, KC_E),
+   COMBO(hexf_combo, KC_F),
+   COMBO(colon_combo, S(KC_SCLN)),
+/* underscore */
+   COMBO(und_combo, S(KC_MINS)),
+   COMBO(num_und_combo, S(KC_MINS)),
+/* brackets */
+   COMBO(lpar_combo, KC_LPRN),
+   COMBO(rpar_combo, KC_RPRN),
+   COMBO(lsquare_combo, KC_LBRC),
+   COMBO(rsquare_combo, KC_RBRC),
+   COMBO(lcurly_combo, KC_LCBR),
+   COMBO(rcurly_combo, KC_RCBR),
+   COMBO(langle_combo, S(KC_COMM)),
+   COMBO(rangle_combo, S(KC_DOT))
+  };                                   
+                                        
 
 void persistent_default_layer_set(uint16_t default_layer) {
   eeconfig_update_default_layer(default_layer);

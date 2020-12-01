@@ -90,7 +90,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 LAYOUT(
        KC_ESC,  KC_Q,  KC_W,  KC_F,  KC_P,  KC_B,               KC_J,  KC_L,  KC_U,  KC_Y, MT(MOD_RGUI, KC_SCLN), KC_QUOT, \
        MT(MOD_LCTL, KC_TAB),  KC_A,  KC_R,  KC_S,  KC_T,  KC_G,               KC_M,  KC_N,  KC_E,  KC_I,   KC_O,  KC_ENT, \
-       KC_HOME, MT(MOD_LALT, KC_Z),  KC_X,  KC_C,  KC_D,  KC_V,               KC_K,  KC_H,  KC_COMM, KC_DOT, MT(MOD_RSFT, KC_SLSH), LT(_FN3, KC_BSLS), \
+       KC_HOME, KC_Z,  KC_X,  KC_C,  KC_D,  KC_V,               KC_K,  KC_H,  KC_COMM, KC_DOT, MT(MOD_RSFT, KC_SLSH), LT(_FN3, KC_BSLS), \
        KC_LPRN, KC_RPRN,              MT(MOD_LALT, KC_MINS), MT(MOD_LCTL, KC_EQL), \
 
        KC_BSFN1, OSM(MOD_LSFT),                                               KC_NAV, KC_SPFN2,
